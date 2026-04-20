@@ -218,7 +218,9 @@ cp -a ./rootfs-base ./rootfs-alpha
 cp -a ./rootfs-base ./rootfs-beta
 ```
 
+
 <img width="1896" height="422" alt="1_alpine" src="https://github.com/user-attachments/assets/70cdf5d1-b8e8-45f5-9ebb-04c62ac67b0a" />
+
 
 > Do not commit `rootfs-base/` or `rootfs-*/` to the repository — they are listed in `.gitignore`.
 
@@ -230,6 +232,9 @@ cp ./cpu_hog    ./rootfs-alpha/
 cp ./io_pulse   ./rootfs-alpha/
 ```
 
+<img width="1480" height="394" alt="2_copy_to_rootfs" src="https://github.com/user-attachments/assets/06f247ea-db4e-45ce-bad0-6b218573af02" />
+
+
 ### Step 2: Load the Kernel Module
 
 ```bash
@@ -238,6 +243,9 @@ sudo insmod monitor.ko
 # Verify the control device was created
 ls -l /dev/container_monitor
 ```
+
+<img width="1326" height="589" alt="3_load_and_verify" src="https://github.com/user-attachments/assets/9c5abcf5-fc01-408c-9809-92f518f42dbe" />
+
 
 Expected output: `crw------- 1 root root <major>, 0 ... /dev/container_monitor`
 
@@ -248,11 +256,17 @@ dmesg | grep container_monitor
 # [container_monitor] Module loaded. Device: /dev/container_monitor
 ```
 
+<img width="1286" height="629" alt="4_check_kernel_logs" src="https://github.com/user-attachments/assets/646479a6-540a-4666-810b-1e461170d72f" />
+
+
 ### Step 3: Start the Supervisor (Terminal 1)
 
 ```bash
 sudo ./engine supervisor ./rootfs-base
 ```
+
+<img width="1358" height="603" alt="5_start_hypervisor" src="https://github.com/user-attachments/assets/3d50a07c-42e2-4ff1-bd65-3b9d568372b6" />
+
 
 The supervisor runs in the foreground and prints:
 
@@ -280,6 +294,15 @@ sudo ./engine logs alpha
 # Stop a container gracefully (SIGTERM → SIGKILL after 5s)
 sudo ./engine stop alpha
 ```
+
+<img width="988" height="504" alt="5_start_container" src="https://github.com/user-attachments/assets/878e19ea-c74e-4d32-bd52-deb51a7582ac" />
+
+<img width="1741" height="301" alt="6_list_all_tracked_containers" src="https://github.com/user-attachments/assets/b39b7645-b55c-4c42-9547-167430bfb3da" />
+
+<img width="1275" height="199" alt="7_container_log" src="https://github.com/user-attachments/assets/b6120a8c-589e-483b-b5e9-5f4981dfcf09" />
+
+<img width="1012" height="147" alt="8_container_stop" src="https://github.com/user-attachments/assets/9745bdc0-a1d4-439c-ad0c-06bffcf7fbee" />
+
 
 ---
 
