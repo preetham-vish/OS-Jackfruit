@@ -301,6 +301,7 @@ sudo ./engine stop alpha
 
 <img width="1275" height="199" alt="7_container_log" src="https://github.com/user-attachments/assets/b6120a8c-589e-483b-b5e9-5f4981dfcf09" />
 
+
 <img width="1012" height="147" alt="8_container_stop" src="https://github.com/user-attachments/assets/9745bdc0-a1d4-439c-ad0c-06bffcf7fbee" />
 
 
