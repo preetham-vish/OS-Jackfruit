@@ -218,6 +218,8 @@ cp -a ./rootfs-base ./rootfs-alpha
 cp -a ./rootfs-base ./rootfs-beta
 ```
 
+<img width="1896" height="422" alt="1_alpine" src="https://github.com/user-attachments/assets/70cdf5d1-b8e8-45f5-9ebb-04c62ac67b0a" />
+
 > Do not commit `rootfs-base/` or `rootfs-*/` to the repository — they are listed in `.gitignore`.
 
 To run workload binaries inside a container, copy them into the rootfs before launch:
