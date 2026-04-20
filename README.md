@@ -373,12 +373,14 @@ To observe memory events in real time:
 sudo dmesg -w | grep container_monitor
 ```
 
-Example output:
 ```
 [container_monitor] Registering container=alpha pid=1234 soft=50331648 hard=83886080
 [container_monitor] SOFT LIMIT container=alpha pid=1234 rss=52428800 limit=50331648
 [container_monitor] HARD LIMIT container=alpha pid=1234 rss=85196800 limit=83886080
 ```
+
+<img width="1116" height="498" alt="image" src="https://github.com/user-attachments/assets/07e2122e-07c2-4bb4-9fc9-486a82a1e0f0" />
+
 
 The supervisor distinguishes termination causes in `ps` output:
 - `stopped` — `stop` command was issued (`stop_requested` flag set before the signal)
@@ -392,6 +394,9 @@ cp ./memory_hog ./rootfs-alpha/
 sudo ./engine start alpha ./rootfs-alpha /memory_hog --soft-mib 20 --hard-mib 32
 sudo dmesg -w | grep container_monitor
 ```
+
+<img width="1172" height="495" alt="image" src="https://github.com/user-attachments/assets/e078cdcf-f421-45cc-9058-1e0383bb8105" />
+
 
 `memory_hog` allocates 8 MiB per second and touches each page, so it will hit the soft limit in ~3 seconds and the hard limit shortly after.
 
@@ -438,6 +443,12 @@ tail -f logs/hiprio.log &
 tail -f logs/loprio.log &
 ```
 
+<img width="1489" height="570" alt="image" src="https://github.com/user-attachments/assets/598da9e4-3cb3-45df-850f-3f93bd8c2f1a" />
+
+<img width="1327" height="527" alt="image" src="https://github.com/user-attachments/assets/f3ef5b5b-0495-4b77-9b0f-714c65c81275" />
+
+<img width="1302" height="544" alt="image" src="https://github.com/user-attachments/assets/900eecdd-dbaf-4483-a341-d5faa9d15d70" />
+
 ### CPU-bound vs I/O-bound
 
 ```bash
@@ -451,6 +462,9 @@ sudo ./engine start io_work  ./rootfs-beta  "/io_pulse 20 100"
 # Observe that the I/O-bound container remains responsive even
 # when the CPU-bound container is monopolizing the CPU
 ```
+
+<img width="1274" height="93" alt="image" src="https://github.com/user-attachments/assets/d105eb60-c171-4022-bfe2-56abc1047bdd" />
+
 
 **Workload reference:**
 
