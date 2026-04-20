@@ -445,9 +445,15 @@ tail -f logs/loprio.log &
 
 <img width="1489" height="570" alt="image" src="https://github.com/user-attachments/assets/598da9e4-3cb3-45df-850f-3f93bd8c2f1a" />
 
+---
+
 <img width="1327" height="527" alt="image" src="https://github.com/user-attachments/assets/f3ef5b5b-0495-4b77-9b0f-714c65c81275" />
 
+---
+
 <img width="1302" height="544" alt="image" src="https://github.com/user-attachments/assets/900eecdd-dbaf-4483-a341-d5faa9d15d70" />
+
+---
 
 ### CPU-bound vs I/O-bound
 
