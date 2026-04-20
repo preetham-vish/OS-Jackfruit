@@ -297,13 +297,14 @@ sudo ./engine stop alpha
 
 <img width="988" height="504" alt="5_start_container" src="https://github.com/user-attachments/assets/878e19ea-c74e-4d32-bd52-deb51a7582ac" />
 
+
 <img width="1741" height="301" alt="6_list_all_tracked_containers" src="https://github.com/user-attachments/assets/b39b7645-b55c-4c42-9547-167430bfb3da" />
+
 
 <img width="1275" height="199" alt="7_container_log" src="https://github.com/user-attachments/assets/b6120a8c-589e-483b-b5e9-5f4981dfcf09" />
 
 
 <img width="1012" height="147" alt="8_container_stop" src="https://github.com/user-attachments/assets/9745bdc0-a1d4-439c-ad0c-06bffcf7fbee" />
-
 
 ---
 
